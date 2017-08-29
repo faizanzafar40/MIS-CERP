@@ -143,7 +143,6 @@ else if($this->input->get('opt') == 'mgpay') { ?>
 			Manage Section
 		</div>
 		<div class="list-group">
-		  	<a type="button" class="list-group-item" id="managePaymentInfo">Manage Payment</a>
 		  	<a type="button" class="list-group-item" id="manageStudentPayInfo">Manage Student Payment</a>
 		</div>
 	</div>

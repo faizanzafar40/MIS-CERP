@@ -477,14 +477,10 @@ class Accounting extends MY_Controller
 		foreach ($paymentData as $key => $value) {
 
 			$button = '
-			<div class="btn-group">
-			  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			    Action <span class="caret"></span>
-			  </button>
-			  <ul class="dropdown-menu">
-			    <li><a href="#" data-toggle="modal" data-target="#editPayment" onclick="updatePayment('.$value['id'].','.$value['type'].')">Edit</a></li>
-			    <li><a href="#" data-toggle="modal" data-target="#removePayment" onclick="removePayment('.$value['id'].')">Remove</a></li>    
-			  </ul>
+			
+			    <a class="btn btn-default" href="#" data-toggle="modal" data-target="#editPayment" onclick="updatePayment('.$value['id'].','.$value['type'].')">Edit</a>
+			    <a class="btn btn-default" href="#" data-toggle="modal" data-target="#removePayment" onclick="removePayment('.$value['id'].')">Remove</a>    
+			  
 			</div>';
 
 			$result['data'][$key] = array(
@@ -525,14 +521,10 @@ class Accounting extends MY_Controller
 			}
 
 			$button = '
-			<div class="btn-group">
-			  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			    Action <span class="caret"></span>
-			  </button>
-			  <ul class="dropdown-menu">			  				  	
-			    <li><a href="#" data-toggle="modal" data-target="#editStudentPay" onclick="updateStudentPay('.$value['payment_id'].')">Edit Payment</a></li>
-			    <li><a href="#" data-toggle="modal" data-target="#removeStudentPay" onclick="removeStudentPay('.$value['payment_id'].')">Remove</a></li>    
-			  </ul>
+						  				  	
+			    <a class="btn btn-default" href="#" data-toggle="modal" data-target="#editStudentPay" onclick="updateStudentPay('.$value['payment_id'].')">Edit Payment</a>
+			    <a class="btn btn-default" href="#" data-toggle="modal" data-target="#removeStudentPay" onclick="removeStudentPay('.$value['payment_id'].')">Remove</a>  
+			  
 			</div>';
 
 			$result['data'][$key] = array(
@@ -1357,14 +1349,9 @@ class Accounting extends MY_Controller
 			$totalExpensesItem = $this->model_accounting->countTotalExpensesItem($value['id']);
 
 			$button = '
-			<div class="btn-group">
-			  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			    Action <span class="caret"></span>
-			  </button>
-			  <ul class="dropdown-menu">
-			    <li><a href="#" data-toggle="modal" data-target="#edit-expenses-modal" onclick="updateExpenses('.$value['id'].')">Edit</a></li>
-			    <li><a href="#" data-toggle="modal" data-target="#removeExpensesModal" onclick="removeExpenses('.$value['id'].')">Remove</a></li>    
-			  </ul>
+			
+			    <a class="btn btn-default" href="#" data-toggle="modal" data-target="#edit-expenses-modal" onclick="updateExpenses('.$value['id'].')">Edit</a>
+			    <a class="btn btn-default" href="#" data-toggle="modal" data-target="#removeExpensesModal" onclick="removeExpenses('.$value['id'].')">Remove</a>
 			</div>';
 
 			$result['data'][$key] = array(
