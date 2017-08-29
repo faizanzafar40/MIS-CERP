@@ -34,7 +34,7 @@ class Teacher extends MY_Controller
 			array(
 				'field' => 'age',
 				'label' => 'Age',
-				'rules' => 'required'
+				'rules' => ''
 			),			
 			array(
 				'field' => 'contact',
@@ -44,7 +44,6 @@ class Teacher extends MY_Controller
 			array(
 				'field' => 'email',
 				'label' => 'Email',
-				'rules' => 'required'
 			),
 			array(
 				'field' => 'registerDate',
@@ -119,15 +118,10 @@ class Teacher extends MY_Controller
 			$result = array('data' => array());
 
 			foreach ($teacherData as $key => $value) {
-				$button = '<!-- Single button -->
-					<div class="btn-group">
-					  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					    Action <span class="caret"></span>
-					  </button>
-					  <ul class="dropdown-menu">
-					    <li><a type="button" data-toggle="modal" data-target="#updateTeacherModal" onclick="editTeacher('.$value['teacher_id'].')"> <i class="glyphicon glyphicon-edit"></i> Edit</a></li>
-					    <li><a type="button" data-toggle="modal" data-target="#removeTeacherModal" onclick="removeTeacher('.$value['teacher_id'].')"> <i class="glyphicon glyphicon-trash"></i> Remove</a></li>		    
-					  </ul>
+				$button = '
+					    <a class="btn btn-default" type="button" data-toggle="modal" data-target="#updateTeacherModal" onclick="editTeacher('.$value['teacher_id'].')"> <i class="glyphicon glyphicon-edit"></i> Edit</a>
+					    <a class="btn btn-default" type="button" data-toggle="modal" data-target="#removeTeacherModal" onclick="removeTeacher('.$value['teacher_id'].')"> <i class="glyphicon glyphicon-trash"></i> Remove</a>		    
+					  
 					</div>';
 
 				$photo = '	<img src="../'.$value['image'].'" alt="Photo" class="img-circle candidate-photo"/>';
@@ -137,7 +131,7 @@ class Teacher extends MY_Controller
 					$value['fname'] . ' ' . $value['lname'],
 					$value['age'],
 					$value['contact'],					
-					$value['email'],				
+					$value['address'],				
 					$button
 				);			
 			} // /foreach
@@ -166,7 +160,7 @@ class Teacher extends MY_Controller
 				array(
 					'field' => 'editAge',
 					'label' => 'Age',
-					'rules' => 'required'
+					'rules' => ''
 				),			
 				array(
 					'field' => 'editContact',
@@ -176,7 +170,7 @@ class Teacher extends MY_Controller
 				array(
 					'field' => 'editEmail',
 					'label' => 'Email',
-					'rules' => 'required'
+					'rules' => ''
 				),
 				array(
 					'field' => 'editRegisterDate',

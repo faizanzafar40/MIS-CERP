@@ -117,7 +117,7 @@
       
       <div class="modal-body">
         <div id="remove-messages"></div>
-        <p> Do you really want to remove</p>    
+        <p> Do you really want to remove ?</p>    
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

@@ -232,14 +232,10 @@ class Student extends MY_Controller
 				$classData = $this->model_classes->fetchClassData($value['class_id']);
 				$sectionData = $this->model_section->fetchSectionByClassSection($value['class_id'], $value['section_id']);
 
-				$button = '<div class="btn-group">
-				  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				    Action <span class="caret"></span>
-				  </button>
-				  <ul class="dropdown-menu">			  	
-				    <li><a href="#" data-toggle="modal" data-target="#editStudentModal" onclick="updateStudent('.$value['student_id'].')">Edit</a></li>
-				    <li><a href="#" data-toggle="modal" data-target="#removeStudentModal" onclick="removeStudent('.$value['student_id'].')">Remove</a></li>			    
-				  </ul>
+				$button = '
+				    <a class="btn btn-default" href="#" data-toggle="modal" data-target="#editStudentModal" onclick="updateStudent('.$value['student_id'].')">Edit</a>
+				    <a class="btn btn-default" href="#" data-toggle="modal" data-target="#removeStudentModal" onclick="removeStudent('.$value['student_id'].')">Remove</a>
+				  
 				</div>';
 
 				$result['data'][$key] = array(
@@ -271,14 +267,10 @@ class Student extends MY_Controller
 				$classData = $this->model_classes->fetchClassData($value['class_id']);
 				$sectionData = $this->model_section->fetchSectionByClassSection($value['class_id'], $value['section_id']);
 
-				$button = '<div class="btn-group">
-				  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				    Action <span class="caret"></span>
-				  </button>
-				  <ul class="dropdown-menu">			  	
-				    <li><a href="#" data-toggle="modal" data-target="#editStudentModal" onclick="updateStudent('.$value['student_id'].')">Edit</a></li>
-				    <li><a href="#" data-toggle="modal" data-target="#removeStudentModal" onclick="removeStudent('.$value['student_id'].')">Remove</a></li>			    
-				  </ul>
+				$button = '		  	
+				    <a class="btn btn-default" href="#" data-toggle="modal" data-target="#editStudentModal" onclick="updateStudent('.$value['student_id'].')">Edit</a>
+				    <a class="btn btn-default" href="#" data-toggle="modal" data-target="#removeStudentModal" onclick="removeStudent('.$value['student_id'].')">Remove</a>		    
+				  
 				</div>';
 
 				$result['data'][$key] = array(

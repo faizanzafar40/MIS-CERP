@@ -25,7 +25,7 @@
     				<th>Name</th>
     				<th>Age</th>
     				<th>Contact</th>    				
-    				<th>Email</th>
+    				<th>Address</th>
     				<th>Action</th>
     			</tr>
     		</thead>
