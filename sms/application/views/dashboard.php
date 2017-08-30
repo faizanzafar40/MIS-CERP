@@ -1,11 +1,13 @@
 
 
+
+
 <div class="row">
 	<div class="col-md-3">
 		<div class="panel panel-primary">
 			<div class="panel-heading">
-				<a href="student?opt=mgst" style="color:white;">
-					Total Student : <span class="badge"><?php echo $countTotalStudent; ?></span>	
+				<a href="student?opt=mgst" style="color:white; font-size: 1.8em;">
+					Total Students : <span class="badge"><?php echo $countTotalStudent; ?></span>	
 				</a>				
 			</div>			
 		</div>
@@ -14,8 +16,8 @@
 	<div class="col-md-3">
 		<div class="panel panel-success">
 			<div class="panel-heading">
-				<a href="teacher">
-					Total Teacher : <span class="badge"><?php echo $countTotalTeacher; ?></span>	 	
+				<a href="teacher" style="font-size: 1.8em;">
+					Total Teachers : <span class="badge"><?php echo $countTotalTeacher; ?></span>	 	
 				</a>
 				
 			</div>			
@@ -25,23 +27,14 @@
 	<div class="col-md-3">
 		<div class="panel panel-info">
 			<div class="panel-heading">
-				<a href="classes">
-					Total Class : <span class="badge"><?php echo $countTotalClasses; ?></span>		
+				<a href="classes" style="font-size: 1.8em;">
+					Total Classes : <span class="badge"><?php echo $countTotalClasses; ?></span>		
 				</a>
 				
 			</div>			
 		</div>
 	</div>
 
-	<div class="col-md-3">
-		<div class="panel panel-warning">
-			<div class="panel-heading">
-				<a href="marksheet?opt=mngms">
-					Total Marksheet : <span class="badge"><?php echo $countTotalMarksheet; ?></span>	
-				</a>
-			</div>			
-		</div>
-	</div>
 
 	<div class="col-md-5">
 		<div class="panel panel-default">
@@ -81,8 +74,7 @@
 			</div>	
 		</div>
 	</div>
-</div>
-
+</div>s
 
 <script type="text/javascript">
   $(document).ready(function(){
