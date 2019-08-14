@@ -1,3 +1,3 @@
-# School-MIS-CERP
+# MIS-for-Schools-CERP
 
-Prototype of Management Information System (MIS) for schools, built in CodeIgniter.
+High Fidelity prototype of a Management Information System (MIS) targeted towards the administrative management of primary and middle schools
